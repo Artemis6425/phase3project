@@ -1,24 +1,13 @@
-# README
+# Leaderboard Project v2
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+another leaderboard website for those people who are interested in speedrunning.
 
-Things you may want to cover:
+-How to use
 
-* Ruby version
+make sure you run `rake db:migrate` and fill out the seeds with what you'd like. I already have some seeded stuff filled out, but feel free to change what you'd like
 
-* System dependencies
+-Issues
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+-many invalid routes give errors
+-google oauth doesn't work but I'll figure it out soon
+-it took too long to make
