@@ -1,0 +1,9 @@
+<% #THIS IS FOR A LOGGED IN USER TO EDIT OR DELETE THEIR OWN RUN %>
+<%= render '/layouts/header'%>
+  <%= render 'error'%>
+
+<h3>Edit Run Form:</h3>
+
+<%= form_tag runs_path(@run), method: "put" do %>
+  <%= render 'form' %>
+<% end %> 

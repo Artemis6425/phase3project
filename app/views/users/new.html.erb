@@ -1,0 +1,15 @@
+<% #THIS IS THE CREATE USER PAGE, NEED TWITCH INTEGRATION %>
+<%= render '/layouts/header'%>
+  
+<%= form_for(@user) do |f|%>
+    <label>Name:</label>
+    <%= f.text_field :name %>
+
+    <label>Email Address:</label>
+    <%= f.text_field :email %>
+
+    <label>Password:</label>
+    <%= f.password_field :password %>
+
+    <%=f.submit%>
+<% end %>

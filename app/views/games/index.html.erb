@@ -1,0 +1,6 @@
+<% #THIS IS TO SHOW THE LIST OF GAMES ON THE LEADERBOARD OR THE GAMES A PERSON HAS RUN %>
+<%= render '/layouts/header'%>
+<h3>Games Supported by our Leaderboard Website:</h3>
+<% @game.each do |x| %>
+  <%= link_to x.name, gameindex_url(x.id) %> <br>
+<% end %>

@@ -1,0 +1,9 @@
+<% #THIS IS FOR A LOGGED IN USER TO SUBMIT A NEW RUN %>
+<%= render '/layouts/header'%>
+  <%= render 'error'%>
+
+<h3>New Run Form:</h3>
+
+<%= form_tag runs_path do %>
+  <%= render 'form' %>
+<% end %> 
