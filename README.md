@@ -2,7 +2,7 @@
 
 Another leaderboard website for those people who are interested in speedrunning. Of course, it could be used for anyting that you would base off of fastest time.
 
--How to use
+### How to use
 
 Make sure you run `rake db:migrate` and fill out the seeds with what you'd like. I already have some seeded stuff filled out, but feel free to change what you'd like. Once you do that, run `rake db:seed` to seed the database.
 
