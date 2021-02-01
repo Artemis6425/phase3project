@@ -11,11 +11,13 @@ Rails.application.routes.draw do
   #end
   #get 'games/:id/new/', to: 'runs#new'
   #get 'games/:id/edit/:id2', to: 'runs#edit'
+  put 'runs/:id', to: 'runs#update'
   get 'users/new', to: 'users#new', as: "newuser"
   get 'games/:id/runs', to: 'runs#index', as: "gameindex"
   get 'games/:id/runs/new', to: 'runs#new', as: "newrun"
   get 'games/:id/runs/:id2/edit', to: 'runs#edit', as: "editrun"
-  get 'auth/:provider/callback', to: 'sessions#omniauth'
-  get 'auth/failure', to: redirect('/')
+  get '/auth/google_oauth2/callback', to: 'sessions#omniauth'
+  get 'auth/failure', to: redirect('/games')
+  get '*path', to: redirect('/games')
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

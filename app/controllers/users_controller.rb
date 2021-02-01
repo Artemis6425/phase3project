@@ -14,13 +14,17 @@ class UsersController < ApplicationController
       redirect_to user_path(current_user)
     else
       if User.find_by(email: params[:user][:email]) == nil
-        return head(:forbidden)
+        flash[:notice] = "ERROR: Couldn't log in, please try again!"
         redirect_to loginuser_url
       else
         @user = User.find_by(email: params[:user][:email])
-        return head(:forbidden) unless @user.authenticate(params[:user][:password])
-        session[:user_id] = @user.id
-        redirect_to user_path(@user)
+        if @user.authenticate(params[:user][:password])
+          session[:user_id] = @user.id
+          redirect_to user_path(@user)
+        else
+          flash[:notice] = "ERROR: Incorrect Username / Password, please try again!"
+          redirect_to loginuser_url
+        end
       end
     end
   end

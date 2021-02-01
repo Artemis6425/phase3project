@@ -1,7 +1,7 @@
 class Run < ApplicationRecord
-  validates_inclusion_of :hour, {:in => 0..23, message: "Hour must be between 0 and 23!"}
-  validates_inclusion_of :minute, {:in => 0..59, message: "Minute must be between 0 and 59!"}
-  validates_inclusion_of :second, {:in => 0..59, message: "Minute must be between 0 and 59!"}
+  validates_inclusion_of :hour, {:in => 0..23, message: " must be between 0 and 23!"}
+  validates_inclusion_of :minute, {:in => 0..59, message: " must be between 0 and 59!"}
+  validates_inclusion_of :second, {:in => 0..59, message: " must be between 0 and 59!"}
   belongs_to :user
   belongs_to :game
 
